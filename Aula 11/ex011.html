@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Sistema de Verificação de Nacionalidade</h1>
+  Digite aqui o pais em qual reside:<input type="text" name="txtp" id="txtp">
+  <input type="button" value="Verificar" onclick="verifica()">
+  <div id="res"></div>
+  <script>
+    function verifica(){
+      var txtp = window.document.querySelector('input#txtp');
+      var result = window.document.querySelector('div#res');
+      var pais = txtp.value;
+      result.innerHTML = `<p>Você reside em <strong>${pais}</strong></p>`;
+      if(pais === 'Brasil'){
+        result.innerHTML += `Você é Brasileiro`;
+      }
+      else{
+        result.innerHTML += `Você é Estrangeiro`;
+      }
+    }
+  
+  </script>
+</body>
+</html>

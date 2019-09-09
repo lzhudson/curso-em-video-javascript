@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Primeiros Passos com DOM</title>
+  <style>
+    body{
+      background: rgb(68, 125, 199);
+      color: white;
+      font: normal 18px Arial;
+    }
+  </style>
+</head>
+<body>
+  <h1>Iniciando estudos com DOM</h1>
+  <p>Aqui vai o resultado</p>
+  <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+  <div class="msgError" name="mensagem" id="msg">Clique em mim</div>
+  <script>
+    var corpo = document.body;
+    //corpo.style.background = 'black';
+    var p1 = document.getElementsByTagName('p')[1];
+    //p1.style.color = 'blue';
+    document.write('Está escrito assim ' + p1.innerHTML);
+    // innerHTML: puxa o html inteiro, inclusive os filhos
+    // innerText: puxa o texto sem os filhos
+    var d = window.document.getElementById('msg');
+    d.style.background = 'green';
+    //d.innerText = 'Estou aguardando...';
+    var divMsg = document.getElementsByName('mensagem')[0];
+    document.write(divMsg);
+    divMsg.style.background = 'red';
+    divMsg.style.display = 'flex';
+    var divError = document.getElementsByClassName('msgError');
+    var e = window.document.querySelector('div#msg');
+    //window.alert(e.clientHeight);
+  </script>
+</body>
+</html>
